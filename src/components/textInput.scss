@@ -1,0 +1,16 @@
+.text-input {
+    height: 64px;
+    padding: 0 24px;
+    box-sizing: border-box;
+    font-size: 28px;
+    border-radius: 8px;
+    outline: none;
+    border: 2px solid #706d78;
+    background-color: #ebece7;
+    color: #353d5d;
+    font-weight: bold;
+
+    &:focus {
+        border-color: #a09fa0;
+    }
+}

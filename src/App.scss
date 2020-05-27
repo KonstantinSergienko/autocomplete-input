@@ -1,0 +1,11 @@
+.app {
+    display: flex;
+    justify-content: space-between;
+    margin: 200px auto 0;
+    max-width: 800px;
+
+    .column {
+        font-size: 24px;
+        max-height: 600px;
+    }
+}
