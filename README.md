@@ -3,3 +3,5 @@
 Для запуска приложения в режиме разработки "yarn start" или "npm start";
 
 В папке "build" находится собраная продакшн версия;
+
+Также используйте плагин для CORS, например https://mybrowseraddon.com/access-control-allow-origin.html;
