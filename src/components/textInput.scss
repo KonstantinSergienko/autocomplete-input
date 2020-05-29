@@ -1,16 +1,53 @@
-.text-input {
-    height: 64px;
-    padding: 0 24px;
-    box-sizing: border-box;
-    font-size: 28px;
-    border-radius: 8px;
-    outline: none;
-    border: 2px solid #706d78;
-    background-color: #ebece7;
-    color: #353d5d;
-    font-weight: bold;
+.text-input-wrapper {
+    position: relative;
 
-    &:focus {
-        border-color: #a09fa0;
+    .text-input {
+        height: 64px;
+        width: 620px;
+        padding: 0 24px 0 52px;
+        box-sizing: border-box;
+        font-size: 28px;
+        border-radius: 8px;
+        outline: none;
+        border: 2px solid #706d78;
+        background-color: #ebece7;
+        color: #353d5d;
+        font-weight: bold;
+    
+        &:focus {
+            border-color: #a09fa0;
+        }
+
+        &::placeholder {
+            font-weight: normal;
+            font-size: 26px;
+        }
+    }
+
+    .search-picture {
+        position: absolute;
+        top: 20px;
+        left: 16px;
+    }
+
+    .autocomplete {
+        position: absolute;
+        width: 620px;
+        top: 64px;
+        background-color: #fff;
+        box-sizing: border-box;
+        border-radius: 8px;
+        border: 2px solid #706d78;
+        padding: 16px 0;
+
+        .option {
+            font-weight: normal;
+            padding: 4px 24px 4px 52px;
+            cursor: pointer;
+
+            &:hover {
+                background-color: #ebece7;
+            }
+        }
     }
 }
