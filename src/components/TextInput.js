@@ -7,49 +7,54 @@ import "./textInput.scss";
 
 @observer
 class TextInput extends React.Component {
-    handlerChange = event => {
-        const { onChange, requestCities} = this.props;
-        const { value } = event.target;
+  handlerChange = (event) => {
+    const { onChange, requestCities } = this.props;
+    const { value } = event.target;
 
-        event.preventDefault();
+    event.preventDefault();
 
-        onChange(value);
-        requestCities(value);
-    }
+    onChange(value);
+    requestCities(value);
+  };
 
-    render() {
-        const { value, placeholder, autocomplete, addCity } = this.props;
+  render() {
+    const { value, placeholder, autocomplete, addCity } = this.props;
 
-        return(
-            <div className="text-input-wrapper">
-                <input 
-                    type="text"
-                    className="text-input"
-                    value={value}
-                    placeholder={placeholder}
-                    onChange={event => this.handlerChange(event)}
-                />
+    return (
+      <div className="text-input-wrapper">
+        <input
+          type="text"
+          className="text-input"
+          value={value}
+          placeholder={placeholder}
+          onChange={(event) => this.handlerChange(event)}
+        />
 
-                <img src={searchPic} className="search-picture" alt="search" />
+        <img src={searchPic} className="search-picture" alt="search" />
 
-                <datalist 
-                    className="autocomplete"
-                    style={autocomplete.length !== 0 ? {display : "block"} : {display: "none"}}
-                >
-                    {autocomplete.map((item, index) => {
-                        return (
-                            <option 
-                                key={index}
-                                className="option"
-                                onClick={() => addCity(item.name)}
-                            >
-                                {item.name}
-                            </option>)
-                    })}
-                </datalist>
-            </div>
-        );
-    }
+        <datalist
+          className="autocomplete"
+          style={
+            autocomplete.length !== 0
+              ? { display: "block" }
+              : { display: "none" }
+          }
+        >
+          {autocomplete.map((item, index) => {
+            return (
+              <option
+                key={index}
+                className="option"
+                onClick={() => addCity(item)}
+              >
+                {item}
+              </option>
+            );
+          })}
+        </datalist>
+      </div>
+    );
+  }
 }
 
 export default TextInput;
