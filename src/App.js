@@ -37,6 +37,7 @@ class App extends React.Component {
 
     return (
       <div className="app">
+        <h2>Motion-logic</h2>
         <div className="search-block">
           <TextInput
             {...inputCity}
